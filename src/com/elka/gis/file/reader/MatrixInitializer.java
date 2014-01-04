@@ -7,13 +7,16 @@ public class MatrixInitializer {
 
 	private ArrayList<ArrayList<Integer>> graphList;
 	private int[][] graphMatrix;
+	private int[][] graphDopelnienieMatrix;
 	private int graphMatrixDim;
 	
 	public MatrixInitializer(ArrayList<ArrayList<Integer>> fileGraphList){
 		this.graphList = fileGraphList;
 		this.graphMatrixDim = fileGraphList.size();
 		this.graphMatrix = new int[graphMatrixDim][graphMatrixDim];
+		this.graphDopelnienieMatrix = new int[graphMatrixDim][graphMatrixDim];
 		this.getGraphListToGraphMatrix();
+		this.makeDopelnienieGrafu();
 	}
 	
 	private void getGraphListToGraphMatrix(){
@@ -36,10 +39,29 @@ public class MatrixInitializer {
 		}
 	}
 	
+	private void makeDopelnienieGrafu(){
+		for (int i=0; i<this.graphMatrixDim; i++){
+			for (int j=0; j<this.graphMatrixDim; j++){
+				if (i!=j){
+					this.graphDopelnienieMatrix[i][j] = (graphMatrix[i][j] == 1) ? 0 : 1;
+				}
+			}
+		}
+	}
+	
 	public void printGraphMatrix(){
 		for (int i=0; i<this.graphMatrixDim; i++){
 			for (int j=0; j<this.graphMatrixDim; j++){
 				System.out.print(this.graphMatrix[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void printGraphDopelnienieMatrix(){
+		for (int i=0; i<this.graphMatrixDim; i++){
+			for (int j=0; j<this.graphMatrixDim; j++){
+				System.out.print(this.graphDopelnienieMatrix[i][j] + " ");
 			}
 			System.out.println();
 		}
@@ -53,6 +75,8 @@ public class MatrixInitializer {
 		System.out.println();
 		MatrixInitializer mi = new MatrixInitializer(fr.getListOfVertices());
 		mi.printGraphMatrix();
+		System.out.println();
+		mi.printGraphDopelnienieMatrix();
 	}
 
 }
