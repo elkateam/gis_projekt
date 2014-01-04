@@ -67,6 +67,10 @@ public class MatrixInitializer {
 		}
 	}
 	
+	public int[][] getGraphMatrix(){
+		return this.graphMatrix;
+	}
+	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		String filePath = "C:\\Users\\£ukasz\\Desktop\\graf.txt";
