@@ -14,7 +14,7 @@ public class FileReader {
 	
 	public FileReader(String filePath) throws IOException{
 		this.filePath = filePath;
-		this.listOfVertices = new ArrayList<>();
+		this.listOfVertices = new ArrayList<ArrayList<Integer>>();
 		this.readData();
 	}
 	

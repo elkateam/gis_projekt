@@ -72,10 +72,10 @@ public class AlgNaiwny {
 				if(checkIfVertexIsInX(iterator.next())){
 					actualCount++;
 				}
-				if (actualCount < lowestNeighbourCount){
-					lowestNeighbourCount = actualCount;
-					vertexNumberWithLowestNeighbours = vertexInX;
-				}
+			}
+			if (actualCount < lowestNeighbourCount){
+				lowestNeighbourCount = actualCount;
+				vertexNumberWithLowestNeighbours = vertexInX;
 			}
 		}
 		return vertexNumberWithLowestNeighbours;
