@@ -108,7 +108,7 @@ public class AlgNaiwny1 {
 //		fr.printlnListOfVertices();
 //		System.out.println();
 		MatrixInitializer mi = new MatrixInitializer(fr.getListOfVertices());
-		AlgNaiwny1 an1 = new AlgNaiwny1(mi.getGraphMatrix());
+		AlgNaiwny1 an1 = new AlgNaiwny1(mi.getDopelnienieGraphMatrix());
 		Vertices u = an1.getUVertices();
 		u.printVertices();
 	}

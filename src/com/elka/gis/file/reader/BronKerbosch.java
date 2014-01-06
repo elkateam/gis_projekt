@@ -109,7 +109,7 @@ public class BronKerbosch {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		String filePath = "C:\\Users\\trocha\\Desktop\\graf.txt";
+		String filePath = "C:\\Users\\£ukasz\\Desktop\\graf1.txt";
 		FileReader fr = new FileReader(filePath);
 		
 		MatrixInitializer mi = new MatrixInitializer(fr.getListOfVertices());

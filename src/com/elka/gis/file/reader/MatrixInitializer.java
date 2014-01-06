@@ -25,8 +25,8 @@ public class MatrixInitializer {
 		for (ArrayList<Integer> graphListElement : graphList){
 			for (Integer intElement : graphListElement){
 				int columnIndex = intElement-1;	//poniewaz indexowanie w tablicy od zera, wiec odejmowanie-1 od numeru wierzcholka polaczonego
-					this.graphMatrix[rowIndex][columnIndex] = 1;
-					this.graphMatrix[columnIndex][rowIndex] = 1;
+				this.graphMatrix[rowIndex][columnIndex] = 1;
+				this.graphMatrix[columnIndex][rowIndex] = 1;
 			}
 			rowIndex++;
 		}
@@ -72,9 +72,13 @@ public class MatrixInitializer {
 		return this.graphMatrix;
 	}
 	
+	public int[][] getDopelnienieGraphMatrix(){
+		return this.graphDopelnienieMatrix;
+	}
+	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		String filePath = "C:\\Users\\£ukasz\\Desktop\\graf1.txt";
+		String filePath = "C:\\Users\\£ukasz\\Desktop\\graf.txt";
 		FileReader fr = new FileReader(filePath);
 		fr.printlnListOfVertices();
 		System.out.println();
