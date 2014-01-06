@@ -18,7 +18,7 @@ public class Vertices extends TreeSet<Integer> {
 	public void printVertices(){
 		Iterator<Integer> iter = iterator();
 		while (iter.hasNext()){
-			System.out.println(iter.next() + " ");
+			System.out.print(iter.next() + " ");
 		}
 	}
 
