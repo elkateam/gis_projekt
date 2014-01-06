@@ -112,17 +112,20 @@ public class AlgNaiwny {
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		String filePath = "C:\\Users\\£ukasz\\Desktop\\graf.txt";
+		String filePath = "C:\\Users\\£ukasz\\Desktop\\graf1.txt";
 		FileReader fr = new FileReader(filePath);
 //		fr.printlnListOfVertices();
 //		System.out.println();
 		MatrixInitializer mi = new MatrixInitializer(fr.getListOfVertices());
-		AlgNaiwny an = new AlgNaiwny(mi.getGraphMatrix());
+//		mi.printGraphDopelnienieMatrix();
+		AlgNaiwny an = new AlgNaiwny(mi.getDopelnienieGraphMatrix());
 		Vertices u = an.getUVertices();
 		u.printVertices();
 //		Vertices[] neigh = an.getNeighbours();
-//		for (Vertices v : neigh){
-//			v.printVertices();
+//		for (int i=0; i<neigh.length; i++){
+//			System.out.println("Sasiedzi wierzcholka "+i);
+//			neigh[i].printVertices();
+//			System.out.println();
 //		}
 //		System.out.println();
 //		Vertices x = an.getXVertices();
