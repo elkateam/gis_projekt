@@ -25,7 +25,10 @@ public class MatrixInitializer {
 		for (ArrayList<Integer> graphListElement : graphList){
 			for (Integer intElement : graphListElement){
 				int columnIndex = intElement-1;	//poniewaz indexowanie w tablicy od zera, wiec odejmowanie-1 od numeru wierzcholka polaczonego
-				this.graphMatrix[rowIndex][columnIndex] = 1;
+				if (columnIndex >= rowIndex){
+					this.graphMatrix[rowIndex][columnIndex] = 1;
+					this.graphMatrix[columnIndex][rowIndex] = 1;
+				}
 			}
 			rowIndex++;
 		}
