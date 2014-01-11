@@ -20,6 +20,7 @@ public class Vertices extends TreeSet<Integer> {
 		while (iter.hasNext()){
 			System.out.print(iter.next() + " ");
 		}
+		System.out.println();
 	}
 
 }
