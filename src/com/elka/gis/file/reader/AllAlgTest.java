@@ -7,7 +7,7 @@ import java.io.PrintStream;
 
 public class AllAlgTest {
 	
-	private boolean testFlag = false;
+	private boolean testFlag = true;
 
 	public void findClique(String[] args) throws IOException {
 		String fileSavePath;
@@ -16,11 +16,11 @@ public class AllAlgTest {
 		FileReader fr;
 		if (testFlag){
 			GraphGenerator gg = new GraphGenerator();
-			fileSavePath = "C:\\Users\\£ukasz\\Desktop\\dupsko.txt";
+			fileSavePath = "C:\\Users\\£ukasz\\Desktop\\gis_testy\\test.txt";
 			try {
 				out = new PrintStream(new FileOutputStream(fileSavePath));
 				System.setOut(out);
-				gg.printlnListOfVertices(gg.getListFromMatrix(gg.GenerateMatrixGraph(100, 0.7)));
+				gg.printlnListOfVertices(gg.getListFromMatrix(gg.GenerateMatrixGraph(100, 0.9)));
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}

@@ -12,6 +12,7 @@ public class TestMain {
 				System.out.println("Trwa wykonywanie programu, prosze czekac...");
 				aat.findClique(args);
 			} catch (IOException e) {
+				System.out.println("Blad odczytu pliku! Dzialanie programu zostalo przerwane");
 				e.printStackTrace();
 			}
 		}
